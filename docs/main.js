@@ -20584,11 +20584,12 @@
 
 	var _createClass3 = _interopRequireDefault(_createClass2);
 
+	var _lang = __webpack_require__(440);
+
+	var _lang2 = _interopRequireDefault(_lang);
+
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
-	/**
-	 * 功能控制器
-	 */
 	var I18NControl = function () {
 	    (0, _createClass3.default)(I18NControl, null, [{
 	        key: "getInst",
@@ -20610,7 +20611,7 @@
 	    function I18NControl() {
 	        (0, _classCallCheck3.default)(this, I18NControl);
 
-	        this.i18nData = {};
+	        this.i18nData = _lang2.default;
 	    }
 
 	    /**
@@ -20657,7 +20658,10 @@
 	        }
 	    }]);
 	    return I18NControl;
-	}();
+	}(); /**
+	      * 功能控制器
+	      */
+
 
 	exports.default = I18NControl;
 
@@ -38490,6 +38494,24 @@
 	    layoutReset();
 	}, window.onLayoutReset = function (t) {
 	    window.layoutResetHandles || (window.layoutResetHandles = []), window.layoutResetHandles.push(t);
+	};
+
+/***/ },
+/* 440 */
+/***/ function(module, exports) {
+
+	module.exports = {
+		"title": "滑动摩擦力",
+		"btn_start": "开始",
+		"btn_continue": "继续",
+		"btn_pause": "暂停",
+		"btn_reset": "复位",
+		"btn_init_speed": "初始速度",
+		"btn_double_speed": "2倍速度",
+		"btn_wood": "木板",
+		"btn_towel": "毛巾",
+		"btn_glass": "玻璃",
+		"msg_animate": "运动过程尚未结束"
 	};
 
 /***/ }

@@ -1,7 +1,9 @@
 /**
  * 功能控制器
  */
-export default class I18NControl{
+import lang from '../../resources/locations/zh/lang.json';
+
+export default class I18NControl {
     /**
      * 单例
      */
@@ -16,7 +18,7 @@ export default class I18NControl{
      * 构造
      */
     constructor() {
-        this.i18nData = {};
+        this.i18nData = lang;
     }
 
     /**
