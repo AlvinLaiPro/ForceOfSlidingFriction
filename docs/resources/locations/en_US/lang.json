@@ -1,0 +1,13 @@
+{
+    "title": "滑动摩擦力",
+    "btn_start": "开始",
+    "btn_continue": "继续",
+    "btn_pause": "暂停",
+    "btn_reset": "复位",
+    "btn_init_speed": "初始速度",
+    "btn_double_speed": "2倍速度",
+    "btn_wood": "木板",
+    "btn_towel": "毛巾",
+    "btn_glass": "玻璃",
+    "msg_animate": "运动过程尚未结束"
+}

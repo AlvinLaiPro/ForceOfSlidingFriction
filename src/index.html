@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>ForceOfSlidingFriction</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+
+
+
+    <div class="container" id="layout">
+        <div class="exam_skin_wood">
+            <div class="frictionalForce_wrapper">
+                <div class="frictionalForce_body">
+                    <div class="frictionalForce_inner">
+                        <div class="frictionalForce_main">
+                            <!--滑动摩擦力图标 开始-->
+                            <div class="frictionalForce_graph">
+                                <div class="frictional_coord"></div>
+                                <!--读数提示 star-->
+                                <div class="graph-prompt shortatge shortatge_in">
+                                    <div class="con-detail"><span><i>0.0</i>N</span></div>
+                                </div>
+                                <!--读数提示 end-->
+                            </div>
+
+                            <!--滑动摩擦力图标 结束-->
+                        </div>
+                        <!--侧边切换材质菜单 开始-->
+                        <div class="frictionalForce_aside">
+                            <ul class="list">
+                                <li index='0' class="woodMenu menuCom active">
+                                    <a href="javascript:;">
+                                        <!--<span class="btn-txt"></span>-->
+                                        <strong class="icon-choice"></strong>
+                                    </a>
+                                </li>
+                                <li index='1' class="towelMenu menuCom">
+                                    <a href="javascript:;">
+                                        <strong class="icon-choice"></strong>
+                                    </a>
+                                </li>
+                                <li index='2' class="glassMenu menuCom">
+                                    <a href="javascript:;">
+                                        <strong class="icon-choice"></strong>
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                        <!--侧边切换材质菜单 结束-->
+                    </div>
+                    <!--弹簧测力计测量场景 开始-->
+                    <!--QQQQ 点击侧边木板按钮frictionalForce_scene加类frictional-wood,点击毛巾加类frictional-towel,点击玻璃加类frictional-glass分别改变木块投影 QQQQ-->
+                    <div class="frictionalForce_scene frictional-glass">
+                        <div class="barbg"></div>
+                        <!-- QQQQ选择木板、毛巾、玻璃其中一种隐藏其余两块div-->
+                        <bg>
+                            <div class="woodbg"></div>
+                            <div class="towelbg" style="display: none"></div>
+                            <div class="glassbg" style="display: none"></div>
+                        </bg>
+                        <!-- QQQQ选择木板、毛巾、玻璃隐藏其余两块-->
+                        <div class="pullObject">
+                            <div class="weightObject">
+                                <div class="farmar-top" style="left:1.6em;display: none;"></div>
+                                <div class="farmar-top" style="left:5.5em;display:none;"></div>
+                            </div>
+                            <div class="scale">
+                                <div class="force-reading">
+                                    <div class="reading"><span><b>0.00</b><i class="TimesNewRoman">N</i></span></div>
+                                </div>
+                                <div class="prompt-sport" style="display: none">
+                                    <div class="con-detail">运动过程尚未结束</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!--弹簧测力计测量场景 结束-->
+                </div>
+                <!--底部菜单 开始-->
+                <div class="frictionalForce_footer_wrapper">
+                    <div class="frictionalForce_footer">
+                        <div class="list-left">
+                            <!-- QQQQ置灰状态加类disabled,二态加上类activeQQQQ -->
+                            <div class="reduceWeight weightCom disabled"><span class="symbol"></span></div>
+                            <div class="farmar"></div>
+                            <div class="plusWeight weightCom">
+                                <span class="symbol symbol-ver"></span>
+                                <span class="symbol symbol-hor"></span>
+                            </div>
+                        </div>
+
+                        <!-- QQQQ二态加上btn_active,不可点击态加上类名click_disabled QQQQ-->
+                        <ul class="list-middle">
+                            <li>
+                                <a href="javascript:;" class="sliding_btns">
+                                    <span class="btns-primary-txt">开始</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="javascript:;" class="sliding_btns click_disabled">
+                                    <span class="btns-primary-txt">复位</span>
+                                </a>
+                            </li>
+                        </ul>
+                        <!-- QQQQ二态添加类ui_btn_active QQQQ-->
+                        <ul class="list-right">
+                            <li data-index="1">
+                                <a href="javascript:;" class="com_btns btns-primary ui_btn_active">
+                                    <span class="btns-primary-txt">初始速度</span>
+                                </a>
+                            </li>
+                            <li data-index="2">
+                                <a href="javascript:;" class="com_btns btns-primary">
+                                    <span class="btns-primary-txt">2倍速度</span>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <!--底部菜单 结束-->
+            </div>
+        </div>
+    </div>
+
+</body>
+
+</html>
