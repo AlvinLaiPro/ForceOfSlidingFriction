@@ -52,12 +52,14 @@ module.exports = {
                 }, {
                 	loader: 'sass-loader'
                 }])*/
-            }, {
-                test: /\.png$/,
-                loader: "url-loader?limit=100000"
-            }, {
-                test: /\.jpg$/,
-                loader: "file-loader"
+            },
+            /*{
+                           test: /\.png$/,
+                           loader: "url-loader?limit==8192?name=/resources/images/[name].[ext]"
+                       },*/
+            {
+                test: /\.(png|jpg)$/,
+                loader: 'file-loader?name=/docs/resources/images/[name].[ext]'
             }, {
                 test: /\.(woff|woff2)(\?v=\d+\.\d+\.\d+)?$/,
                 loader: "url?limit=10000&mimetype=application/font-woff"
