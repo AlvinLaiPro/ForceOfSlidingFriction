@@ -10,5 +10,11 @@ import css from '../css.scss'
 export default function (view)
 {
 	AppControl.getInst().init(view);
-	console.log('run')
+	console.log('run');
+	let app = AppControl.getInst();
+	
+	Promise.all(app.config.promiseArr).then(function(){
+		app.$view.find('.container').css('visibility','visible');
+		console.log('load complete');
+	});
 }

@@ -18482,12 +18482,22 @@
 	'use strict';
 
 	Object.defineProperty(exports, "__esModule", {
-	  value: true
+		value: true
 	});
 
+	var _promise = __webpack_require__(302);
+
+	var _promise2 = _interopRequireDefault(_promise);
+
 	exports.default = function (view) {
-	  _AppControl2.default.getInst().init(view);
-	  console.log('run');
+		_AppControl2.default.getInst().init(view);
+		console.log('run');
+		var app = _AppControl2.default.getInst();
+
+		_promise2.default.all(app.config.promiseArr).then(function () {
+			app.$view.find('.container').css('visibility', 'visible');
+			console.log('load complete');
+		});
 	};
 
 	var _AppControl = __webpack_require__(301);
@@ -18509,10 +18519,6 @@
 	Object.defineProperty(exports, "__esModule", {
 	    value: true
 	});
-
-	var _promise = __webpack_require__(302);
-
-	var _promise2 = _interopRequireDefault(_promise);
 
 	var _getPrototypeOf = __webpack_require__(367);
 
@@ -18630,10 +18636,6 @@
 	            this.animate = _AnimateControl2.default.getInst().init(this);
 	            this.data = _AppData2.default.getInst().init(this, extendData);
 
-	            _promise2.default.all(this.config.promiseArr).then(function () {
-	                $(view).find('.container').css('visibility', 'visible');
-	                console.log('load complete');
-	            });
 	            return this;
 	        }
 	    }]);
@@ -21006,7 +21008,7 @@
 	            this.SINGLE_SPEED = 1; //一倍速度
 	            this.DOUBLE_SPEED = 2; //二倍速度
 
-	            var preloadImagesArr = [this.basePath + 'resources/images/barbg.png', this.basePath + 'resources/images/graph-bg.png', this.basePath + 'resources/images/wood.png', this.basePath + 'resources/images/celiji.png'];
+	            var preloadImagesArr = [this.basePath + 'resources/images/barbg.png', this.basePath + 'resources/images/graph-bg.png', this.basePath + 'resources/images/wood.png', this.basePath + 'resources/images/celiji.png', this.basePath + 'resources/images/woodblock-wood.png', this.basePath + 'resources/images/yellow-icon.png', this.basePath + 'resources/images/farmar.png', this.basePath + 'resources/images/wood-btn.png', this.basePath + 'resources/images/towel-btn.png', this.basePath + 'resources/images/glass-btn.png'];
 	            this.promiseArr = [];
 
 	            preloadImagesArr.map(function (url) {
