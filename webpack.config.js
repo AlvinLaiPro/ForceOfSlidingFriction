@@ -59,7 +59,7 @@ module.exports = {
                        },*/
             {
                 test: /\.(png|jpg)$/,
-                loader: 'file-loader?name=/docs/resources/images/[name].[ext]'
+                loader: 'file-loader?name=./resources/images/[name].[ext]'
             }, {
                 test: /\.(woff|woff2)(\?v=\d+\.\d+\.\d+)?$/,
                 loader: "url?limit=10000&mimetype=application/font-woff"

@@ -127,7 +127,7 @@ body {
     .container .exam_skin_wood .frictional_coord {
       width: 43.66667em;
       height: 22.625em;
-      background: url(/docs/resources/images/graph-bg.png) no-repeat;
+      background: url(./resources/images/graph-bg.png) no-repeat;
       background-size: 100% 100%; }
     .container .exam_skin_wood .frictionalForce_scene {
       position: relative;
@@ -140,7 +140,7 @@ body {
         left: 2.29167em;
         width: 67.25em;
         height: 11.66667em;
-        background: url(/docs/resources/images/barbg.png) center bottom no-repeat;
+        background: url(./resources/images/barbg.png) center bottom no-repeat;
         background-size: 100% 100%; }
       .container .exam_skin_wood .frictionalForce_scene .woodbg {
         position: absolute;
@@ -149,7 +149,7 @@ body {
         z-index: 2;
         width: 42.5em;
         height: 5.04167em;
-        background: url(/docs/resources/images/wood.png) no-repeat;
+        background: url(./resources/images/wood.png) no-repeat;
         background-size: 100% 100%; }
       .container .exam_skin_wood .frictionalForce_scene .towelbg {
         position: absolute;
@@ -158,7 +158,7 @@ body {
         z-index: 2;
         width: 44.41667em;
         height: 5.20833em;
-        background: url(/docs/resources/images/towel.png) no-repeat;
+        background: url(./resources/images/towel.png) no-repeat;
         background-size: 100% 100%; }
       .container .exam_skin_wood .frictionalForce_scene .glassbg {
         position: absolute;
@@ -167,7 +167,7 @@ body {
         z-index: 2;
         width: 44.16667em;
         height: 4.33333em;
-        background: url(/docs/resources/images/glass.png) no-repeat;
+        background: url(./resources/images/glass.png) no-repeat;
         background-size: 100% 100%; }
       .container .exam_skin_wood .frictionalForce_scene .pullObject {
         position: absolute;
@@ -181,7 +181,7 @@ body {
           z-index: 3;
           width: 12.58333em;
           height: 6.08333em;
-          background: url(/docs/resources/images/woodblock-glass.png) no-repeat;
+          background: url(./resources/images/woodblock-glass.png) no-repeat;
           background-size: 100% 100%; }
           .container .exam_skin_wood .frictionalForce_scene .pullObject .weightObject .txt {
             color: #fff;
@@ -192,7 +192,7 @@ body {
           bottom: 4.4em;
           width: 3.625em;
           height: 4.45833em;
-          background: url(/docs/resources/images/farmarbig.png) no-repeat;
+          background: url(./resources/images/farmarbig.png) no-repeat;
           background-size: 100% 100%; }
         .container .exam_skin_wood .frictionalForce_scene .pullObject .scale {
           position: absolute;
@@ -201,7 +201,7 @@ body {
           z-index: 5;
           width: 22.41667em;
           height: 7.04167em;
-          background: url(/docs/resources/images/celiji.png) no-repeat;
+          background: url(./resources/images/celiji.png) no-repeat;
           background-size: 100%; }
           .container .exam_skin_wood .frictionalForce_scene .pullObject .scale .reading {
             position: absolute;
@@ -224,10 +224,10 @@ body {
           .container .exam_skin_wood .frictionalForce_scene .pullObject .force-reading .reading i.TimesNewRoman {
             font-family: 'Times New Roman'; }
     .container .exam_skin_wood .frictionalForce_scene.frictional-wood .pullObject .weightObject {
-      background: url(/docs/resources/images/woodblock-wood.png) no-repeat;
+      background: url(./resources/images/woodblock-wood.png) no-repeat;
       background-size: 100%; }
     .container .exam_skin_wood .frictionalForce_scene.frictional-towel .pullObject .weightObject {
-      background: url(/docs/resources/images/woodblock-towel.png) no-repeat;
+      background: url(./resources/images/woodblock-towel.png) no-repeat;
       background-size: 100%; }
     .container .exam_skin_wood .graph-prompt {
       display: none;
@@ -313,7 +313,7 @@ body {
           z-index: 99;
           right: -0.82em;
           top: -.80833em;
-          background: url(/docs/resources/images/icon_choice.png) no-repeat;
+          background: url(./resources/images/icon_choice.png) no-repeat;
           background-size: 100% 100%;
           -webkit-transition: all .75s;
           transition: all .75s;
@@ -323,19 +323,19 @@ body {
       .container .exam_skin_wood .frictionalForce_aside .woodMenu a {
         width: 4.375em;
         height: 2.16667em;
-        background: url(/docs/resources/images/wood-btn.png) no-repeat;
+        background: url(./resources/images/wood-btn.png) no-repeat;
         background-size: 100% 100%;
         margin-bottom: 2.41667em; }
       .container .exam_skin_wood .frictionalForce_aside .towelMenu a {
         width: 4.375em;
         height: 2em;
-        background: url(/docs/resources/images/towel-btn.png) no-repeat;
+        background: url(./resources/images/towel-btn.png) no-repeat;
         background-size: 100% 100%;
         margin-bottom: 2.41667em; }
       .container .exam_skin_wood .frictionalForce_aside .glassMenu a {
         width: 4.375em;
         height: 2.16667em;
-        background: url(/docs/resources/images/glass-btn.png) no-repeat;
+        background: url(./resources/images/glass-btn.png) no-repeat;
         background-size: 100% 100%; }
     .container .exam_skin_wood .frictionalForce_footer_wrapper {
       position: absolute;
@@ -426,7 +426,7 @@ body {
         left: 10.3em;
         height: 4.08333em;
         width: 3.16667em;
-        background: url(/docs/resources/images/farmar.png) no-repeat;
+        background: url(./resources/images/farmar.png) no-repeat;
         background-size: 100%;
         display: inline-block; }
       .container .exam_skin_wood .frictionalForce_footer .list-middle {
@@ -444,19 +444,19 @@ body {
           height: 3.3333333333em;
           line-height: 3.1666666667em;
           padding: 0 .75em;
-          background: url(/docs/resources/images/yellow-icon.png) center center no-repeat;
+          background: url(./resources/images/yellow-icon.png) center center no-repeat;
           background-size: 100% 100%;
           text-align: center; }
           .container .exam_skin_wood .frictionalForce_footer .list-middle a.sliding_btns .btns-primary-txt {
             font-size: 1.5em;
             color: #864100; }
         .container .exam_skin_wood .frictionalForce_footer .list-middle .sliding_btns.btn_active {
-          background: url(/docs/resources/images/yellowon-icon.png) center center no-repeat;
+          background: url(./resources/images/yellowon-icon.png) center center no-repeat;
           background-size: 100% 100%; }
           .container .exam_skin_wood .frictionalForce_footer .list-middle .sliding_btns.btn_active .btns-primary-txt {
             color: #fcdb75; }
         .container .exam_skin_wood .frictionalForce_footer .list-middle .sliding_btns.click_disabled {
-          background: url(/docs/resources/images/gray-icon.png) center center no-repeat;
+          background: url(./resources/images/gray-icon.png) center center no-repeat;
           background-size: 100% 100%; }
           .container .exam_skin_wood .frictionalForce_footer .list-middle .sliding_btns.click_disabled .btns-primary-txt {
             color: #757d83; }
