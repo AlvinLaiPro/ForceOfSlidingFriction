@@ -20088,7 +20088,7 @@
 	            this.data = _AppData2.default.getInst().init(this, extendData);
 
 	            _promise2.default.all(this.config.promiseArr).then(function () {
-	                $(view).css('visibirlity', 'visible');
+	                $(view).css('visibility', 'visible');
 	                console.log('load complete');
 	            });
 	            return this;
