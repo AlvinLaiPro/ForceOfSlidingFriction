@@ -62,6 +62,7 @@ export default class AppControl extends BaseControl {
         this.data = AppData.getInst().init(this, extendData);
         
         Promise.all(this.config.promiseArr).then(function(){
+           $(view).find('.container').css('visibility','visible');
             console.log('load complete');
         });
         return this;
