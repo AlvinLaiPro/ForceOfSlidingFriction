@@ -73,6 +73,7 @@ class AppConfig {
 			this.basePath + 'resources/images/farmar.png',
 			this.basePath + 'resources/images/wood-btn.png',
 			this.basePath + 'resources/images/towel-btn.png',
+			this.basePath + 'resources/images/yellowon-icon.png',
 			this.basePath + 'resources/images/glass-btn.png'
         ];
 		this.promiseArr = [];

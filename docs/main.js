@@ -21008,7 +21008,7 @@
 	            this.SINGLE_SPEED = 1; //一倍速度
 	            this.DOUBLE_SPEED = 2; //二倍速度
 
-	            var preloadImagesArr = [this.basePath + 'resources/images/barbg.png', this.basePath + 'resources/images/graph-bg.png', this.basePath + 'resources/images/wood.png', this.basePath + 'resources/images/celiji.png', this.basePath + 'resources/images/woodblock-wood.png', this.basePath + 'resources/images/yellow-icon.png', this.basePath + 'resources/images/farmar.png', this.basePath + 'resources/images/wood-btn.png', this.basePath + 'resources/images/towel-btn.png', this.basePath + 'resources/images/glass-btn.png'];
+	            var preloadImagesArr = [this.basePath + 'resources/images/barbg.png', this.basePath + 'resources/images/graph-bg.png', this.basePath + 'resources/images/wood.png', this.basePath + 'resources/images/celiji.png', this.basePath + 'resources/images/woodblock-wood.png', this.basePath + 'resources/images/yellow-icon.png', this.basePath + 'resources/images/farmar.png', this.basePath + 'resources/images/wood-btn.png', this.basePath + 'resources/images/towel-btn.png', this.basePath + 'resources/images/yellowon-icon.png', this.basePath + 'resources/images/glass-btn.png'];
 	            this.promiseArr = [];
 
 	            preloadImagesArr.map(function (url) {
