@@ -60,6 +60,11 @@ export default class AppControl extends BaseControl {
         this.GraphControl = GraphControl.getInst().init(this);
         this.animate = AnimateControl.getInst().init(this);
         this.data = AppData.getInst().init(this, extendData);
+        
+        Promise.all(this.config.promiseArr).then(function(){
+           $(view).css('visibility','visible')
+            console.log('load complete');
+        });
         return this;
     }
 
