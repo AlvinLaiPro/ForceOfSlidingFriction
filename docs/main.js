@@ -31104,7 +31104,7 @@ window.onload = function () {
 /* 134 */
 /***/ (function(module, exports) {
 
-var serviceWorkerOption = {"scriptURL":"/sw.js"};
+var serviceWorkerOption = {"scriptURL":"/ForceOfSlidingFriction/sw.js"};
       "use strict";
 
 Object.defineProperty(exports, "__esModule", {
