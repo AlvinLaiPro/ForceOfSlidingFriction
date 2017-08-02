@@ -1,520 +1,534 @@
 @charset "UTF-8";
 $baseFontSize: 24px !default;
-$baseFontFamily: 'Microsoft YaHei',
-Helvetica,
-Arial,
-sans-serif !default;
+$baseFontFamily: 'Microsoft YaHei', Helvetica, Arial, sans-serif !default;
 @function pxToEm($px, $baseSize:$baseFontSize) {
-    @return $px / $baseSize * 1em;
+  @return $px / $baseSize * 1em;
 }
 
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
 }
 
-@import "tools_common";
+@import "./tools_common";
 body {
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    font-family: 'Microsoft YaHei', Helvetica, Arial, sans-serif;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  font-family: 'Microsoft YaHei', Helvetica, Arial, sans-serif;
 }
-.loading{
+.loading {
   position: absolute;
   left: 0;
   top: 0;
   width: 100%;
   height: 100%;
   text-align: center;
-  img{
+  img {
     position: absolute;
     left: 50%;
     top: 50%;
-    transform: translate(-50%, -50%);
+    -webkit-transform: translate(-50%, -50%);
+        -ms-transform: translate(-50%, -50%);
+            transform: translate(-50%, -50%);
   }
 }
 
 .container {
-    visibility: hidden;
+  visibility: hidden;
+  width: 100%;
+  height: 100%;
+  position: relative;
+  background: #afc7d8;
+  a {
+    text-decoration: none;
+  }
+  ul {
+    li {
+      list-style: none;
+    }
+  }
+  .hide_dom {
+    display: none;
+  }
+  .exam_skin_wood {
     width: 100%;
     height: 100%;
     position: relative;
-    background: #afc7d8;
-    a {
-        text-decoration: none;
+    .com_btns {
+      margin: 0;
     }
-    ul {
-        li {
-            list-style: none;
-        }
-    }
-    .hide_dom {
-        display: none;
-    }
-    .exam_skin_wood {
+    .frictionalForce_wrapper {
+      width: 100%;
+      height: 100%;
+      position: relative;
+      padding: 3.66667em 4.75em 1.66667em 4em;
+      background: #bfd3e2;
+      .frictionalForce_inner {
         width: 100%;
-        height: 100%;
+        height: pxToEm(536px);
+        /* overflow: hidden;*/
         position: relative;
-        .com_btns {
-            margin: 0;
-        }
-        .frictionalForce_wrapper {
-            width: 100%;
-            height: 100%;
-            position: relative;
-            padding: 3.66667em 4.75em 1.66667em 4em;
-            background: #bfd3e2;
-            .frictionalForce_inner {
-                width: 100%;
-                height: pxToEm(536px);
-                // overflow: hidden;
-                position: relative;
-                padding-right: 10em;
-            }
-        }
-        .frictionalForce_body {
-            width: 100%;
-            height: 100%;
-        }
-        /*++++++++主体部分开始+++++++++++*/
-        .frictionalForce_main {
-            width: 100%;
-            height: 100%;
-            position: relative;
-            float: left;
-        }
-        /*############+滑动摩擦力图表 开始######### */
-        .staticInvisiblePath,
-        {
-            stroke-opacity: 0.009;
-        }
-        .invisibleCircle {
-            fill-opacity: 0.009;
-        }
-        .frictionalForce_graph {
-            position: absolute;
-            left: pxToEm(385px);
-        }
-        .frictional_coord {
-            width: pxToEm(1048px);
-            height: pxToEm(543px);
-            background: url(./resources/images/graph-bg.png) no-repeat;
-            background-size: 100% 100%;
-        }
-        /*############+滑动摩擦力图表 结束######### */
-        /*############+弹簧测力计测量场景 开始######### */
-        .frictionalForce_scene {
-            position: relative;
-            width: 100%;
-            height: pxToEm(410px);
-            .barbg {
-                position: absolute;
-                bottom: 0;
-                z-index: 1;
-                left: pxToEm(55px);
-                width: pxToEm(1614px);
-                height: pxToEm(280px);
-                background: url(./resources/images/barbg.png) center bottom no-repeat;
-                background-size: 100% 100%;
-            }
-            .woodbg {
-                position: absolute;
-                bottom: pxToEm(150px);
-                left: pxToEm(164px);
-                z-index: 2;
-                width: pxToEm(1020px);
-                height: pxToEm(121px);
-                background: url(./resources/images/wood.png) no-repeat;
-                background-size: 100% 100%;
-            }
-            .towelbg {
-                position: absolute;
-                bottom: pxToEm(150px);
-                left: pxToEm(128px);
-                z-index: 2;
-                width: pxToEm(1066px);
-                height: pxToEm(125px);
-                background: url(./resources/images/towel.png) no-repeat;
-                background-size: 100% 100%;
-            }
-            .glassbg {
-                position: absolute;
-                bottom: pxToEm(150px);
-                left: pxToEm(133px);
-                z-index: 2;
-                width: pxToEm(1060px);
-                height: pxToEm(104px);
-                background: url(./resources/images/glass.png) no-repeat;
-                background-size: 100% 100%;
-            }
-            .pullObject {
-                position: absolute;
-                bottom: pxToEm(188px);
-                left: 9.8em;
-                z-index: 5;
-                .weightObject {
-                    position: absolute;
-                    bottom: 0;
-                    left: 0;
-                    z-index: 3;
-                    width: pxToEm(302px);
-                    height: pxToEm(146px);
-                    background: url(./resources/images/woodblock-glass.png) no-repeat;
-                    background-size: 100% 100%;
-                    .txt {
-                        color: #fff;
-                        line-height: pxToEm(50px);
-                        display: inline-block;
-                    }
-                }
-                .farmar-top {
-                    position: absolute;
-                    bottom: 4.4em;
-                    width: pxToEm(87px);
-                    height: pxToEm(107px);
-                    background: url(./resources/images/farmarbig.png) no-repeat;
-                    background-size: 100% 100%;
-                }
-                .scale {
-                    position: absolute;
-                    bottom: 0;
-                    left: 11.9em;
-                    z-index: 5;
-                    width: pxToEm(538px);
-                    height: pxToEm(169px);
-                    background: url(./resources/images/celiji.png) no-repeat;
-                    background-size: 100%;
-                    .reading {
-                        position: absolute;
-                        left: 50%;
-                        top: 50%;
-                        transform: translate(-50%, -50%);
-                        color: #17536b;
-                        text-shadow: 2px 2px 0 rgba(23, 83, 107, .2);
-                        span {
-                            font-size: pxToEm(64px);
-                        }
-                    }
-                }
-                .force-reading {
-                    position: absolute;
-                    bottom: 2em;
-                    left: pxToEm(68px);
-                    z-index: 5;
-                    width: pxToEm(278px);
-                    height: pxToEm(94px);
-                    .reading {
-                        b {
-                            font-weight: normal;
-                        }
-                        i.TimesNewRoman {
-                            font-family: 'Times New Roman';
-                        }
-                    }
-                }
-            }
-        }
-        /*++++++选中侧边按钮动作++++++++*/
-        .frictionalForce_scene.frictional-wood .pullObject .weightObject {
-            background: url(./resources/images/woodblock-wood.png) no-repeat;
-            background-size: 100%;
-        }
-        .frictionalForce_scene.frictional-towel .pullObject .weightObject {
-            background: url(./resources/images/woodblock-towel.png) no-repeat;
-            background-size: 100%;
-        }
-        /*++++++选中侧边按钮动作++++++++*/
-        /*############+弹簧测力计测量场景 结束######## */
-        /*@@@@@@@@弹窗 star @@@@@@@@*/
-        .graph-prompt {
-            display: none;
-            position: absolute;
-            pointer-events: none;
-            z-index: 99;
-            background: rgba(47, 47, 47, .5);
-            border-radius: pxToEm(17px);
-            color: #fff;
-            padding: 0 pxToEm(16px);
-            height: pxToEm(52px);
-            line-height: pxToEm(52px);
-            text-align: center;
-            margin-bottom: 0.33333em;
-            .con-detail {
-                white-space: nowrap;
-                span {
-                    font-size: pxToEm(48px);
-                    font-family: 'Times New Roman';
-                }
-            }
-            &:before {
-                content: "";
-                display: inline-block;
-                position: absolute;
-                left: 20%;
-                top: 100%;
-                // transform: translateX(-50%);
-                width: 0.4166667em;
-                height: 0.33333em;
-                -webkit-clip-path: polygon(0 0, 0.4166667em 0, 0 0.33333em);
-                clip-path: polygon(0 0, 0.4166667em 0, 0 0.33333em);
-                background: rgba(47, 47, 47, .5);
-            }
-        }
-        .prompt-sport {
-            position: absolute;
-            bottom: -4em;
-            left: 2em;
-            z-index: 99;
-            background: rgba(47, 47, 47, .8);
-            border-radius: pxToEm(10px);
-            color: #fff;
-            padding: 0 2.08333em;
-            height: pxToEm(76px);
-            line-height: pxToEm(76px);
-            text-align: center;
-            .con-detail {
-                white-space: nowrap;
-                span {
-                    font-size: pxToEm(48px);
-                }
-            }
-            &:before {
-                content: "";
-                display: inline-block;
-                position: absolute;
-                left: 2em;
-                bottom: 100%;
-                width: 0;
-                height: 0;
-                border-left: pxToEm(15px) solid transparent;
-                border-right: pxToEm(15px) solid transparent;
-                border-bottom: pxToEm(16px) solid rgba(47, 47, 47, .8);
-            }
-        }
-        /*@@@@@@@@弹窗 end @@@@@@@@*/
-        /*#########侧边材质选择按钮开始##########*/
-        .frictionalForce_aside {
-            position: absolute;
-            right: 0;
-            top: 0;
-            z-index: 2;
-            width: pxToEm(150px);
-            height: 100%;
-            padding-top: pxToEm(90px);
-            .list {
-                padding: pxToEm(45px) 0;
-                background: #9cafbc;
-                border-radius: .625em;
-                li {
-                    display: inline-block;
-                    text-align: center;
-                }
-                li.menuCom a {
-                    display: block;
-                    position: relative;
-                    color: #fff;
-                }
-                .btn-txt {
-                    font-size: pxToEm(36px);
-                }
-                .menuCom .icon-choice {
-                    width: pxToEm(40px);
-                    height: pxToEm(40px);
-                    position: absolute;
-                    z-index: 99;
-                    right: -0.82em;
-                    top: -.80833em;
-                    background: url(./resources/images/icon_choice.png) no-repeat;
-                    background-size: 100% 100%;
-                    -webkit-transition: all .75s;
-                    transition: all .75s;
-                    display: none
-                }
-                .menuCom.active .icon-choice {
-                    display: block
-                }
-            }
-            .woodMenu a {
-                width: pxToEm(105px);
-                height: pxToEm(52px);
-                background: url(./resources/images/wood-btn.png) no-repeat;
-                background-size: 100% 100%;
-                margin-bottom: pxToEm(58px);
-            }
-            .towelMenu a {
-                width: pxToEm(105px);
-                height: pxToEm(48px);
-                background: url(./resources/images/towel-btn.png) no-repeat;
-                background-size: 100% 100%;
-                margin-bottom: pxToEm(58px);
-            }
-            .glassMenu a {
-                width: pxToEm(105px);
-                height: pxToEm(52px);
-                background: url(./resources/images/glass-btn.png) no-repeat;
-                background-size: 100% 100%;
-            }
-        }
-        /*#########侧边材质选择按钮结束#########*/
-        /*++++底部开始++++*/
-        .frictionalForce_footer_wrapper {
-            position: absolute;
-            left: 0;
-            bottom: pxToEm(20px);
-            height: pxToEm(114px);
-            width: 100%;
-            padding: 0 4.75em 0 pxToEm(133px);
-            line-height: pxToEm(114px);
-        }
-        .frictionalForce_footer {
-            width: 100%;
-            height: 100%;
-            position: relative;
-            z-index: 99;
-            background: rgba(56, 70, 80, .26);
-            border-radius: pxToEm(10px);
-            .list-left {
-                position: relative;
-                float: left;
-                width: 22em;
-                height: 100%;
-                padding-top: pxToEm(12px);
-            }
-            .weightCom {
-                width: pxToEm(86px);
-                height: pxToEm(86px);
-                line-height: pxToEm(86px);
-                display: inline-block;
-                margin: 0 pxToEm(40px);
-                border-radius: pxToEm(10px);
-                color: #626f79;
-                background: linear-gradient(to top, #e9e9e9 0, #fff 100%);
-                border: 1px solid #397274;
-            }
-            .reduceWeight {
-                position: absolute;
-                left: 3.08333em;
-            }
-            .plusWeight {
-                position: absolute;
-                right: 1.2em;
-            }
-            .reduceWeight span,
-            .plusWeight span {
-                display: inline-block;
-                position: absolute;
-                left: 50%;
-                top: 50%;
-                margin-left: pxToEm(-22px);
-            }
-            .reduceWeight .symbol,
-            .plusWeight .symbol {
-                width: pxToEm(44px);
-                height: pxToEm(4px);
-                background: #626f79;
-            }
-            .plusWeight .symbol-hor {
-                content: "";
-                display: inline-block;
-                position: absolute;
-                left: 50%;
-                top: 50%;
-                margin-left: pxToEm(-2px);
-                margin-top: pxToEm(-22px);
-                width: pxToEm(4px);
-                height: pxToEm(44px);
-                background: #626f79;
-            }
-            .reduceWeight.disabled,
-            .plusWeight.disabled {
-                background: linear-gradient(to top, #c1c8cc 0, #c8d1d7 100%);
-                border-color: #93989a;
-                pointer-events: none;
-                span {
-                    background: #8c979d;
-                }
-            }
-            .plusWeight.disabled .symbol-hor {
-                background: #8c979d;
-            }
-            .reduceWeight.active,
-            .plusWeight.active,
-            .reduceWeight:active,
-            .plusWeight:active {
-                background: linear-gradient(to top, #76b8ba 0, #89c5c7 100%);
-                span {
-                    background: #fff;
-                }
-            }
-            .plusWeight.active:before,
-            .plusWeight:active:before {
-                background: #fff;
-            }
-            .farmar {
-                position: absolute;
-                top: 0;
-                left: 10.3em;
-                height: pxToEm(98px);
-                width: pxToEm(76px);
-                background: url(./resources/images/farmar.png) no-repeat;
-                background-size: 100%;
-                display: inline-block;
-            }
-            .list-middle {
-                float: left;
-                height: 100%;
-                color: #384650;
-                padding: .8333em pxToEm(50px);
-                li {
-                    display: inline-block;
-                    margin: 0 1.0416666667em;
-                }
-                a.sliding_btns {
-                    float: left;
-                    display: inline-block;
-                    min-width: 8.3333333333em;
-                    height: 3.3333333333em;
-                    line-height: 3.1666666667em;
-                    padding: 0 .75em;
-                    background: url(./resources/images/yellow-icon.png) center center no-repeat;
-                    background-size: 100% 100%;
-                    text-align: center;
-                    .btns-primary-txt {
-                        font-size: 1.5em;
-                        color: #864100;
-                    }
-                }
-                .sliding_btns.btn_active {
-                    background: url(./resources/images/yellowon-icon.png) center center no-repeat;
-                    background-size: 100% 100%;
-                    .btns-primary-txt {
-                        color: #fcdb75;
-                    }
-                }
-                .sliding_btns.click_disabled {
-                    background: url(./resources/images/gray-icon.png) center center no-repeat;
-                    background-size: 100% 100%;
-                    .btns-primary-txt {
-                        color: #757d83;
-                    }
-                }
-            }
-            .list-right {
-                float: right;
-                padding: .8333em;
-                height: 100%;
-                li {
-                    display: inline-block;
-                    margin: 0 .75em;
-                }
-                a {
-                    float: left;
-                    display: block;
-                }
-            }
-        }
-        /*++++底部结束++++*/
+        padding-right: 10em;
+      }
     }
+    .frictionalForce_body {
+      width: 100%;
+      height: 100%;
+    }
+    /*++++++++主体部分开始+++++++++++*/
+    .frictionalForce_main {
+      width: 100%;
+      height: 100%;
+      position: relative;
+      float: left;
+    }
+    /*############+滑动摩擦力图表 开始######### */
+    .staticInvisiblePath {
+      stroke-opacity: 0.009;
+    }
+    .invisibleCircle {
+      fill-opacity: 0.009;
+    }
+    .frictionalForce_graph {
+      position: absolute;
+      left: pxToEm(385px);
+    }
+    .frictional_coord {
+      width: pxToEm(1048px);
+      height: pxToEm(543px);
+      background: url(./resources/images/graph-bg.png) no-repeat;
+      background-size: 100% 100%;
+    }
+    /*############+滑动摩擦力图表 结束######### */
+    /*############+弹簧测力计测量场景 开始######### */
+    .frictionalForce_scene {
+      position: relative;
+      width: 100%;
+      height: pxToEm(410px);
+      .barbg {
+        position: absolute;
+        bottom: 0;
+        z-index: 1;
+        left: pxToEm(55px);
+        width: pxToEm(1614px);
+        height: pxToEm(280px);
+        background: url(./resources/images/barbg.png) center bottom no-repeat;
+        background-size: 100% 100%;
+      }
+      .woodbg {
+        position: absolute;
+        bottom: pxToEm(150px);
+        left: pxToEm(164px);
+        z-index: 2;
+        width: pxToEm(1020px);
+        height: pxToEm(121px);
+        background: url(./resources/images/wood.png) no-repeat;
+        background-size: 100% 100%;
+      }
+      .towelbg {
+        position: absolute;
+        bottom: pxToEm(150px);
+        left: pxToEm(128px);
+        z-index: 2;
+        width: pxToEm(1066px);
+        height: pxToEm(125px);
+        background: url(./resources/images/towel.png) no-repeat;
+        background-size: 100% 100%;
+      }
+      .glassbg {
+        position: absolute;
+        bottom: pxToEm(150px);
+        left: pxToEm(133px);
+        z-index: 2;
+        width: pxToEm(1060px);
+        height: pxToEm(104px);
+        background: url(./resources/images/glass.png) no-repeat;
+        background-size: 100% 100%;
+      }
+      .pullObject {
+        position: absolute;
+        bottom: pxToEm(188px);
+        left: 9.8em;
+        z-index: 5;
+        .weightObject {
+          position: absolute;
+          bottom: 0;
+          left: 0;
+          z-index: 3;
+          width: pxToEm(302px);
+          height: pxToEm(146px);
+          background: url(./resources/images/woodblock-glass.png) no-repeat;
+          background-size: 100% 100%;
+          .txt {
+            color: #fff;
+            line-height: pxToEm(50px);
+            display: inline-block;
+          }
+        }
+        .farmar-top {
+          position: absolute;
+          bottom: 4.4em;
+          width: pxToEm(87px);
+          height: pxToEm(107px);
+          background: url(./resources/images/farmarbig.png) no-repeat;
+          background-size: 100% 100%;
+        }
+        .scale {
+          position: absolute;
+          bottom: 0;
+          left: 11.9em;
+          z-index: 5;
+          width: pxToEm(538px);
+          height: pxToEm(169px);
+          background: url(./resources/images/celiji.png) no-repeat;
+          background-size: 100%;
+          .reading {
+            position: absolute;
+            left: 50%;
+            top: 50%;
+            -webkit-transform: translate(-50%, -50%);
+                -ms-transform: translate(-50%, -50%);
+                    transform: translate(-50%, -50%);
+            color: #17536b;
+            text-shadow: 2px 2px 0 rgba(23, 83, 107, .2);
+            span {
+              font-size: pxToEm(64px);
+            }
+          }
+        }
+        .force-reading {
+          position: absolute;
+          bottom: 2em;
+          left: pxToEm(68px);
+          z-index: 5;
+          width: pxToEm(278px);
+          height: pxToEm(94px);
+          .reading {
+            b {
+              font-weight: normal;
+            }
+            i.TimesNewRoman {
+              font-family: 'Times New Roman';
+            }
+          }
+        }
+      }
+    }
+    /*++++++选中侧边按钮动作++++++++*/
+    .frictionalForce_scene.frictional-wood .pullObject .weightObject {
+      background: url(./resources/images/woodblock-wood.png) no-repeat;
+      background-size: 100%;
+    }
+    .frictionalForce_scene.frictional-towel .pullObject .weightObject {
+      background: url(./resources/images/woodblock-towel.png) no-repeat;
+      background-size: 100%;
+    }
+    /*++++++选中侧边按钮动作++++++++*/
+    /*############+弹簧测力计测量场景 结束######## */
+    /*@@@@@@@@弹窗 star @@@@@@@@*/
+    .graph-prompt {
+      display: none;
+      position: absolute;
+      pointer-events: none;
+      z-index: 99;
+      background: rgba(47, 47, 47, .5);
+      border-radius: pxToEm(17px);
+      color: #fff;
+      padding: 0 pxToEm(16px);
+      height: pxToEm(52px);
+      line-height: pxToEm(52px);
+      text-align: center;
+      margin-bottom: 0.33333em;
+      .con-detail {
+        white-space: nowrap;
+        span {
+          font-size: pxToEm(48px);
+          font-family: 'Times New Roman';
+        }
+      }
+      &:before {
+        content: "";
+        display: inline-block;
+        position: absolute;
+        left: 20%;
+        top: 100%;
+        /* transform: translateX(-50%);*/
+        width: 0.4166667em;
+        height: 0.33333em;
+        -webkit-clip-path: polygon(0 0, 0.4166667em 0, 0 0.33333em);
+        clip-path: polygon(0 0, 0.4166667em 0, 0 0.33333em);
+        background: rgba(47, 47, 47, .5);
+      }
+    }
+    .prompt-sport {
+      position: absolute;
+      bottom: -4em;
+      left: 2em;
+      z-index: 99;
+      background: rgba(47, 47, 47, .8);
+      border-radius: pxToEm(10px);
+      color: #fff;
+      padding: 0 2.08333em;
+      height: pxToEm(76px);
+      line-height: pxToEm(76px);
+      text-align: center;
+      .con-detail {
+        white-space: nowrap;
+        span {
+          font-size: pxToEm(48px);
+        }
+      }
+      &:before {
+        content: "";
+        display: inline-block;
+        position: absolute;
+        left: 2em;
+        bottom: 100%;
+        width: 0;
+        height: 0;
+        border-left: pxToEm(15px) solid transparent;
+        border-right: pxToEm(15px) solid transparent;
+        border-bottom: pxToEm(16px) solid rgba(47, 47, 47, .8);
+      }
+    }
+    /*@@@@@@@@弹窗 end @@@@@@@@*/
+    /*#########侧边材质选择按钮开始##########*/
+    .frictionalForce_aside {
+      position: absolute;
+      right: 0;
+      top: 0;
+      z-index: 2;
+      width: pxToEm(150px);
+      height: 100%;
+      padding-top: pxToEm(90px);
+      .list {
+        padding: pxToEm(45px) 0;
+        background: #9cafbc;
+        border-radius: .625em;
+        li {
+          display: inline-block;
+          text-align: center;
+        }
+        li.menuCom a {
+          display: block;
+          position: relative;
+          color: #fff;
+        }
+        .btn-txt {
+          font-size: pxToEm(36px);
+        }
+        .menuCom .icon-choice {
+          width: pxToEm(40px);
+          height: pxToEm(40px);
+          position: absolute;
+          z-index: 99;
+          right: -0.82em;
+          top: -.80833em;
+          background: url(./resources/images/icon_choice.png) no-repeat;
+          background-size: 100% 100%;
+          -webkit-transition: all .75s;
+          -o-transition: all .75s;
+          transition: all .75s;
+          display: none;
+        }
+        .menuCom.active .icon-choice {
+          display: block;
+        }
+      }
+      .woodMenu a {
+        width: pxToEm(105px);
+        height: pxToEm(52px);
+        background: url(./resources/images/wood-btn.png) no-repeat;
+        background-size: 100% 100%;
+        margin-bottom: pxToEm(58px);
+      }
+      .towelMenu a {
+        width: pxToEm(105px);
+        height: pxToEm(48px);
+        background: url(./resources/images/towel-btn.png) no-repeat;
+        background-size: 100% 100%;
+        margin-bottom: pxToEm(58px);
+      }
+      .glassMenu a {
+        width: pxToEm(105px);
+        height: pxToEm(52px);
+        background: url(./resources/images/glass-btn.png) no-repeat;
+        background-size: 100% 100%;
+      }
+    }
+    /*#########侧边材质选择按钮结束#########*/
+    /*++++底部开始++++*/
+    .frictionalForce_footer_wrapper {
+      position: absolute;
+      left: 0;
+      bottom: pxToEm(20px);
+      height: pxToEm(114px);
+      width: 100%;
+      padding: 0 4.75em 0 pxToEm(133px);
+      line-height: pxToEm(114px);
+    }
+    .frictionalForce_footer {
+      width: 100%;
+      height: 100%;
+      position: relative;
+      z-index: 99;
+      background: rgba(56, 70, 80, .26);
+      border-radius: pxToEm(10px);
+      .list-left {
+        position: relative;
+        float: left;
+        width: 22em;
+        height: 100%;
+        padding-top: pxToEm(12px);
+      }
+      .weightCom {
+        width: pxToEm(86px);
+        height: pxToEm(86px);
+        line-height: pxToEm(86px);
+        display: inline-block;
+        margin: 0 pxToEm(40px);
+        border-radius: pxToEm(10px);
+        color: #626f79;
+        background: -webkit-gradient(linear, left bottom, left top, color-stop(0, #e9e9e9), to(#fff));
+        background: -webkit-linear-gradient(bottom, #e9e9e9 0, #fff 100%);
+        background: -o-linear-gradient(bottom, #e9e9e9 0, #fff 100%);
+        background: linear-gradient(to top, #e9e9e9 0, #fff 100%);
+        border: 1px solid #397274;
+      }
+      .reduceWeight {
+        position: absolute;
+        left: 3.08333em;
+      }
+      .plusWeight {
+        position: absolute;
+        right: 1.2em;
+      }
+      .reduceWeight span,
+      .plusWeight span {
+        display: inline-block;
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        margin-left: pxToEm(-22px);
+      }
+      .reduceWeight .symbol,
+      .plusWeight .symbol {
+        width: pxToEm(44px);
+        height: pxToEm(4px);
+        background: #626f79;
+      }
+      .plusWeight .symbol-hor {
+        content: "";
+        display: inline-block;
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        margin-left: pxToEm(-2px);
+        margin-top: pxToEm(-22px);
+        width: pxToEm(4px);
+        height: pxToEm(44px);
+        background: #626f79;
+      }
+      .reduceWeight.disabled,
+      .plusWeight.disabled {
+        background: -webkit-gradient(linear, left bottom, left top, color-stop(0, #c1c8cc), to(#c8d1d7));
+        background: -webkit-linear-gradient(bottom, #c1c8cc 0, #c8d1d7 100%);
+        background: -o-linear-gradient(bottom, #c1c8cc 0, #c8d1d7 100%);
+        background: linear-gradient(to top, #c1c8cc 0, #c8d1d7 100%);
+        border-color: #93989a;
+        pointer-events: none;
+        span {
+          background: #8c979d;
+        }
+      }
+      .plusWeight.disabled .symbol-hor {
+        background: #8c979d;
+      }
+      .reduceWeight.active,
+      .plusWeight.active,
+      .reduceWeight:active,
+      .plusWeight:active {
+        background: -webkit-gradient(linear, left bottom, left top, color-stop(0, #76b8ba), to(#89c5c7));
+        background: -webkit-linear-gradient(bottom, #76b8ba 0, #89c5c7 100%);
+        background: -o-linear-gradient(bottom, #76b8ba 0, #89c5c7 100%);
+        background: linear-gradient(to top, #76b8ba 0, #89c5c7 100%);
+        span {
+          background: #fff;
+        }
+      }
+      .plusWeight.active:before,
+      .plusWeight:active:before {
+        background: #fff;
+      }
+      .farmar {
+        position: absolute;
+        top: 0;
+        left: 10.3em;
+        height: pxToEm(98px);
+        width: pxToEm(76px);
+        background: url(./resources/images/farmar.png) no-repeat;
+        background-size: 100%;
+        display: inline-block;
+      }
+      .list-middle {
+        float: left;
+        height: 100%;
+        color: #384650;
+        padding: .8333em pxToEm(50px);
+        li {
+          display: inline-block;
+          margin: 0 1.0416666667em;
+        }
+        a.sliding_btns {
+          float: left;
+          display: inline-block;
+          min-width: 8.3333333333em;
+          height: 3.3333333333em;
+          line-height: 3.1666666667em;
+          padding: 0 .75em;
+          background: url(./resources/images/yellow-icon.png) center center
+            no-repeat;
+          background-size: 100% 100%;
+          text-align: center;
+          .btns-primary-txt {
+            font-size: 1.5em;
+            color: #864100;
+          }
+        }
+        .sliding_btns.btn_active {
+          background: url(./resources/images/yellowon-icon.png) center center
+            no-repeat;
+          background-size: 100% 100%;
+          .btns-primary-txt {
+            color: #fcdb75;
+          }
+        }
+        .sliding_btns.click_disabled {
+          background: url(./resources/images/gray-icon.png) center center
+            no-repeat;
+          background-size: 100% 100%;
+          .btns-primary-txt {
+            color: #757d83;
+          }
+        }
+      }
+      .list-right {
+        float: right;
+        padding: .8333em;
+        height: 100%;
+        li {
+          display: inline-block;
+          margin: 0 .75em;
+        }
+        a {
+          float: left;
+          display: block;
+        }
+      }
+    }
+    /*++++底部结束++++*/
+  }
 }
